@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de Estoque</h1>
+    <script>
+    var saldo = parseInt(prompt("Informe o saldo inicial: "));
+    var continuar = "s";
+
+    document.write(`Saldo inicial: ${saldo}` + `<br>` + `<br>`)
+    while (continuar === "s")
+    {
+        situacao = parseInt(prompt("Informe:" + "\n1- Para compra de peças \n2- Para venda de peças"));
+        quantidade = parseInt(prompt("Informe a quantidade de peças:"));
+    
+    if (situacao === 1) {
+        document.write(`Entrada de peças: ${quantidade}` + `<br>`)
+        saldo = saldo + quantidade
+        document.write(`Saldo: ${saldo}` + `<br>` + `<br>`)
+    }
+    else
+        if (situacao === 2 && quantidade< saldo){
+            document.write(`Venda de peças: ${quantidade}` + `<br>`)
+            saldo = saldo - quantidade
+            document.write(`Saldo: ${saldo}` + `<br>` + `<br>`)
+        }
+        else{
+            document.write("Saldo insuficiente" + `<br>`)
+            break
+        }
+    continuar = prompt("Deseja continuar?:\ns-sim\nn-n")
+    }
+    if (continuar ==="n"){
+        window.alert("Sistema encerrado")
+        document.write("Sistema encerrado!")
+    }
+    </script>
+</body>
+</html>
