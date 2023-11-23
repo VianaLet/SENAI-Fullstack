@@ -11,8 +11,8 @@
     document.write(`Saldo inicial: ${saldo}` + `<br>`)
     encerrar = "n";
     while (encerrar == "n"){
-        tipo = parseInt(prompt("Informar tipo de entrada: "))
-        quantidade = parseInt(prompt('Informar quantidade'))
+        tipo = parseInt(prompt("Informar tipo de entrada: 1-Compra 2-Venda"))
+        quantidade = parseInt(prompt('Informar quantidade: '))
     
         if (tipo == 1){
             saldo = saldo + quantidade
@@ -24,12 +24,12 @@
                 document.write(`Saída: ${quantidade}` + `<br>`)
             }
             else{
-                document.write('Saldo insuficiente') + `<br>`;
-                window.alert("Saldo insuficiente");
+                document.write('Saldo insuficiente' + `<br>`) ;
+                window.alert("Saldo insuficiente" );
         }
         }
         document.write(`Saldo: ${saldo}` + `<br>` + `<br>`)
-        encerrar = prompt(`Deseja encerra?: s- sim n-não`)
+        encerrar = prompt(`Deseja encerra?: (s/n)`)
     }
     document.write("Programa encerrado")
     </script>
